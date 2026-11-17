@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #080A0F;
+  color: #F5F7FA;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Subtle futuristic grid pattern */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(37, 46, 61, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 46, 61, 0.25) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.lab-glow {
+  box-shadow: 0 0 35px -5px rgba(182, 255, 92, 0.15);
+}
+
+.neon-border {
+  border-color: #B6FF5C;
+  box-shadow: 0 0 15px rgba(182, 255, 92, 0.25);
+}
+
+.blue-glow {
+  box-shadow: 0 0 20px -3px rgba(67, 181, 255, 0.3);
+}
+
+.orange-glow {
+  box-shadow: 0 0 20px -3px rgba(255, 170, 85, 0.25);
+}
+
+/* Custom terminal scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252E3D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #43B5FF;
+}
+
+/* Radar scan animation */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 8s linear infinite;
+}
+
+/* Smooth pulse */
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
